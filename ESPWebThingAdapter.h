@@ -294,6 +294,10 @@ private:
         prop["title"] = item->title;
       }
 
+      if (item->description != "") {
+        prop["description"] = item->description;
+      }
+
       if (item->minimum < item->maximum) {
         prop["minimum"] = item->minimum;
       }

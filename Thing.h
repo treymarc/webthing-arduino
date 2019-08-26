@@ -44,8 +44,9 @@ public:
   double maximum = -1;
   double multipleOf = -1;
 
-  ThingItem(const char* id_, const char* description_, ThingPropertyType type_, const char* atType_):
+  ThingItem(const char* id_, const char* title_, const char* description_, ThingPropertyType type_, const char* atType_):
     id(id_),
+    title(title_),
     description(description_),
     type(type_),
     atType(atType_) {
@@ -79,8 +80,8 @@ class ThingProperty : public ThingItem {
 public:
   const char** propertyEnum = nullptr;
 
-  ThingProperty(const char* id_, const char* description_, ThingPropertyType type_, const char* atType_) :
-    ThingItem(id_, description_, type_, atType_) {
+  ThingProperty(const char* id_, const char* title_, const char* description_, ThingPropertyType type_, const char* atType_) :
+    ThingItem(id_, title_, description_, type_, atType_) {
   }
 };
 
